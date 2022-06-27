@@ -1,13 +1,12 @@
-import axios from axios;
+import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'mockapi...',
-    withCredentials: true,
+    baseURL: 'https://62b993ff41bf319d228015e5.mockapi.io/',
     timeout: 3000
 });
 
-const APITableData = {
+export const tableDataAPI = {
     getData () {
-        return instance.get('').catch(err => `Get request is failed! ${err}`);
+        return instance.get('clients').catch(err => `Get request is failed! ${err}`);
     }
 };
